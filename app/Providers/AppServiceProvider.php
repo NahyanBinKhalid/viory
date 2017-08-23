@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Providers;
+namespace Viory\Providers;
 
 use Illuminate\Support\ServiceProvider;
 

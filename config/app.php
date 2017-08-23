@@ -171,11 +171,11 @@ return [
         /*
          * Application Service Providers...
          */
-        App\Providers\AppServiceProvider::class,
-        App\Providers\AuthServiceProvider::class,
-        // App\Providers\BroadcastServiceProvider::class,
-        App\Providers\EventServiceProvider::class,
-        App\Providers\RouteServiceProvider::class,
+        Viory\Providers\AppServiceProvider::class,
+        Viory\Providers\AuthServiceProvider::class,
+        // Viory\Providers\BroadcastServiceProvider::class,
+        Viory\Providers\EventServiceProvider::class,
+        Viory\Providers\RouteServiceProvider::class,
 
     ],
 
