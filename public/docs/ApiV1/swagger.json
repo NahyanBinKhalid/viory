@@ -1,0 +1,59 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "title": "Viory APIs",
+        "contact": {
+            "name": "Nahyan Bin Khalid",
+            "url": "http://www.nahyanbinkhalid.com",
+            "email": "nahyan.bin.khalid@gmail.com"
+        },
+        "version": "1.0"
+    },
+    "host": "localhost/",
+    "basePath": "viory/public/api/v1",
+    "schemes": [
+        "http",
+        "https"
+    ],
+    "consumes": [
+        "application/json"
+    ],
+    "produces": [
+        "application/json"
+    ],
+    "paths": {},
+    "definitions": {
+        "Service Not Found": {
+            "required": [
+                "code",
+                "message"
+            ],
+            "properties": {
+                "404": {
+                    "description": "Class ApiController",
+                    "type": "integer"
+                },
+                "message": {
+                    "description": "Class ApiController",
+                    "type": "Service Not Found"
+                }
+            }
+        },
+        "Record Not Found": {
+            "required": [
+                "code",
+                "message"
+            ],
+            "properties": {
+                "404": {
+                    "description": "Class ApiController",
+                    "type": "integer"
+                },
+                "message": {
+                    "description": "Class ApiController",
+                    "type": "Record Not Found"
+                }
+            }
+        }
+    }
+}

@@ -5,6 +5,49 @@ namespace App\Http\Controllers;
 use App\Http\Traits\ApiResponse;
 use App\Http\Traits\ErrorResponse;
 
+/**
+ * Class ApiController
+ *
+ * @package App\Http\Controllers
+ *
+ * @SWG\Swagger(
+ *     host="localhost/",
+ *     basePath="viory/public/api/v1",
+ *     schemes={"http", "https"},
+ *     consumes={"application/json"},
+ *     produces={"application/json"},
+ *     @SWG\Info(
+ *         version="1.0",
+ *         title="Viory APIs",
+ *         @SWG\Contact(name="Nahyan Bin Khalid", email="nahyan.bin.khalid@gmail.com", url="http://www.nahyanbinkhalid.com"),
+ *     ),
+ *     @SWG\Definition(
+ *         definition="Service Not Found",
+ *         required={"code", "message"},
+ *         @SWG\Property(
+ *             property="404",
+ *             type="integer"
+ *         ),
+ *         @SWG\Property(
+ *             property="message",
+ *             type="Service Not Found"
+ *         )
+ *     ),
+ *     @SWG\Definition(
+ *         definition="Record Not Found",
+ *         required={"code", "message"},
+ *         @SWG\Property(
+ *             property="404",
+ *             type="integer"
+ *         ),
+ *         @SWG\Property(
+ *             property="message",
+ *             type="Record Not Found"
+ *         )
+ *     )
+ * )
+ */
+
 abstract class ApiController extends Controller
 {
 	const HTTP_CONTINUE = 100;
