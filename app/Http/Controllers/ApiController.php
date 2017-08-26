@@ -1,14 +1,14 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace Viory\Http\Controllers;
 
-use App\Http\Traits\ApiResponse;
-use App\Http\Traits\ErrorResponse;
+use Viory\Http\Traits\ApiResponse;
+use Viory\Http\Traits\ErrorResponse;
 
 /**
  * Class ApiController
  *
- * @package App\Http\Controllers
+ * @package Viory\Http\Controllers
  *
  * @SWG\Swagger(
  *     host="localhost/",

@@ -177,6 +177,8 @@ return [
         Viory\Providers\EventServiceProvider::class,
         Viory\Providers\RouteServiceProvider::class,
 
+	    Laravel\Passport\PassportServiceProvider::class,
+
 	    \L5Swagger\L5SwaggerServiceProvider::class,
 	    Collective\Html\HtmlServiceProvider::class,
 

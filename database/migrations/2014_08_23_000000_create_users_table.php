@@ -35,6 +35,7 @@ class CreateUsersTable extends Migration
 	        $table->string('activation_token', 128)->nullable();
 	        $table->string('forgot_token', 128)->nullable();
 	        $table->rememberToken();
+	        $table->timestampTz('last_login')->nullable();
 	        $table->timestampsTz();
 	        $table->engine = 'InnoDB';
         });

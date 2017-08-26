@@ -14,7 +14,10 @@ use Illuminate\Http\Request;
 */
 
 Route::group(["prefix" => "v1"], function () {
-	Route::middleware('auth:api')->get('/user', function (Request $request) {
-		return $request->user();
-	});
+
+	Route::get("/countries", "ApiV1\CountriesController@listAction");
+	Route::get("/countries/{id}", "ApiV1\CountriesController@recordAction");
+//	Route::middleware('auth:api')->get('/user', function (Request $request) {
+//		return $request->user();
+//	});
 });

@@ -21,7 +21,81 @@
     "produces": [
         "application/json"
     ],
-    "paths": {},
+    "paths": {
+        "/register": {
+            "post": {
+                "tags": [
+                    "Users : Operations About User"
+                ],
+                "summary": "Registers a User.",
+                "description": "Registers a User.",
+                "operationId": "registerAction",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "name",
+                        "in": "formData",
+                        "description": "Full Name of a User",
+                        "required": false,
+                        "type": "string",
+                        "format": "string"
+                    },
+                    {
+                        "name": "username",
+                        "in": "formData",
+                        "description": "Unique username",
+                        "required": true,
+                        "type": "string",
+                        "format": "string"
+                    },
+                    {
+                        "name": "email",
+                        "in": "formData",
+                        "description": "Unique User Email",
+                        "required": true,
+                        "type": "string",
+                        "format": "email"
+                    },
+                    {
+                        "name": "password",
+                        "in": "formData",
+                        "description": "Password",
+                        "required": false,
+                        "type": "string",
+                        "format": "string"
+                    },
+                    {
+                        "name": "is_social",
+                        "in": "formData",
+                        "description": "Social Account [0: Normal Registeration | 1: Facebook Login]",
+                        "required": false,
+                        "type": "boolean",
+                        "format": "int32",
+                        "default": false
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "HTTP_OK"
+                    },
+                    "401": {
+                        "description": "HTTP_UNAUTHORIZED"
+                    },
+                    "405": {
+                        "description": "HTTP_METHOD_NOT_ALLOWED"
+                    },
+                    "500": {
+                        "description": "HTTP_INTERNAL_SERVER_ERROR"
+                    }
+                }
+            }
+        }
+    },
     "definitions": {
         "Service Not Found": {
             "required": [

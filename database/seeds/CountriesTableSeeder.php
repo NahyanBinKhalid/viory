@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use Viory\Models\Country;
 
 class CountriesTableSeeder extends Seeder
 {
@@ -1278,5 +1279,6 @@ class CountriesTableSeeder extends Seeder
 				'iso_code_3'    => 'JEY'
 			]
 		];
+	    Country::insert($countries);
     }
 }

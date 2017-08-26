@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Traits;
+namespace Viory\Http\Traits;
 
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
