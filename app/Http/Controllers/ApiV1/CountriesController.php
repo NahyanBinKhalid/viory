@@ -17,7 +17,7 @@ class CountriesController extends ApiController
 			'type'				=>	"countriesListFetched",
 			'message'			=>	"Countries List Fetched."
 		];
-		return $this->responseView(['countries' => $countries], $status, ['Content-Type' => 'application/json'], false);
+		return $this->responseView($countries, $status, ['Content-Type' => 'application/json'], false);
 	}
 
 	public function recordAction(Request $request, $id)
@@ -29,6 +29,6 @@ class CountriesController extends ApiController
 			'type'				=>	"countryFetched",
 			'message'			=>	"Country Fetched."
 		];
-		return $this->responseView(['country' => $country], $status, ['Content-Type' => 'application/json'], false);
+		return $this->responseView($country, $status, ['Content-Type' => 'application/json'], false);
 	}
 }

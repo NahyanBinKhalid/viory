@@ -3,9 +3,7 @@
  * Class UsersController
  *
  * @package Viory\Http\Controllers\ApiV1
- */
-
-/**
+ *
  * Display a listing of the resource.
  *
  * @return \Illuminate\Http\JsonResponse
@@ -68,6 +66,10 @@
  *     @SWG\Response(
  *         response=401,
  *         description="HTTP_UNAUTHORIZED"
+ *     ),
+ *     @SWG\Response(
+ *         response=404,
+ *         description="HTTP_NOT_FOUND"
  *     ),
  *     @SWG\Response(
  *         response=405,

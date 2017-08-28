@@ -23,14 +23,28 @@ trait ApiResponse
 	 */
 	protected function responseView($data = [], $status = [], $headers = [], $error = false) {
 		//		$status = "statusCode, httpStatus, type, message";
-		$responseData = [
-			"error"			=>	$error,
-			"status_code"	=>	$status['statusCode'],
-			"http_status"	=>	$status['httpStatus'],
-			"type"			=>	$status['type'],
-			"message"		=>	$status['message'],
-			"data"			=>	$data
-		];
+		if(sizeof($data) > 0)
+		{
+			$responseData = [
+				"error"			=>	$error,
+				"status_code"	=>	$status['statusCode'],
+				"http_status"	=>	$status['httpStatus'],
+				"type"			=>	$status['type'],
+				"message"		=>	$status['message'],
+				"data"			=>	$data
+			];
+		}
+		else
+		{
+			$responseData = [
+				"error"			=>	true,
+				"status_code"	=>	404,
+				"http_status"	=>	"HTTP_NOT_FOUND",
+				"type"			=>	"notFound",
+				"message"		=>	"Record Not Found",
+				"data"			=>	[]
+			];
+		}
 		return response()->json($responseData, $status['statusCode'], $headers);
 	}
 
