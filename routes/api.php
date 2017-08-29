@@ -17,6 +17,8 @@ Route::group(["prefix" => "v1"], function () {
 
 	Route::get("/countries", "ApiV1\CountriesController@listAction");
 	Route::get("/countries/{id}", "ApiV1\CountriesController@recordAction");
+
+	Route::post("/register", "ApiV1\UsersController@registerAction");
 //	Route::middleware('auth:api')->get('/user', function (Request $request) {
 //		return $request->user();
 //	});

@@ -16,7 +16,7 @@
  *     operationId="registerAction",
  *     consumes={"application/json"},
  *     produces={"application/json"},
- *     tags={"Users : Operations About User"},
+ *     tags={"Users"},
  *     @SWG\Parameter(
  *         description="Full Name of a User",
  *         in="formData",

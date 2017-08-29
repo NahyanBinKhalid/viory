@@ -132,6 +132,8 @@ return [
     |
     */
 
+    'client_secret' => env('CLIENT_SECRET', ''),
+
     /*
     |--------------------------------------------------------------------------
     | Autoloaded Service Providers
@@ -184,11 +186,14 @@ return [
         // Viory\Providers\BroadcastServiceProvider::class,
         Viory\Providers\EventServiceProvider::class,
         Viory\Providers\RouteServiceProvider::class,
+	    Viory\Providers\HelpersServiceProvider::class,
 
 	    Laravel\Passport\PassportServiceProvider::class,
 
 	    \L5Swagger\L5SwaggerServiceProvider::class,
 	    Collective\Html\HtmlServiceProvider::class,
+
+
 
     ],
 
