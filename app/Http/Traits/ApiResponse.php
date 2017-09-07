@@ -23,7 +23,7 @@ trait ApiResponse
 	 */
 	protected function responseView($data = [], $status = [], $headers = [], $error = false) {
 		//		$status = "statusCode, httpStatus, type, message";
-		if(sizeof($data) > 0)
+		if(sizeof($data) > 0 && !$error)
 		{
 			$responseData = [
 				"error"			=>	$error,
@@ -45,6 +45,20 @@ trait ApiResponse
 				"data"			=>	[]
 			];
 		}
+		return response()->json($responseData, $status['statusCode'], $headers);
+	}
+
+	protected function notificationView($status = [], $headers = [], $error = false) {
+		//		$status = "statusCode, httpStatus, type, message";
+
+		$responseData = [
+			"error"			=>	$error,
+			"status_code"	=>	$status['statusCode'],
+			"http_status"	=>	$status['httpStatus'],
+			"type"			=>	$status['type'],
+			"message"		=>	$status['message'],
+			"data"			=>	[]
+		];
 		return response()->json($responseData, $status['statusCode'], $headers);
 	}
 

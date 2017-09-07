@@ -20,9 +20,9 @@ class CountriesController extends ApiController
 		return $this->responseView($countries, $status, ['Content-Type' => 'application/json'], false);
 	}
 
-	public function recordAction(Request $request, $id)
+	public function recordAction(Request $request, $any)
 	{
-		$country = Country::where('id', $id)->first();
+		$country = Country::where('id', $any)->orWhere('country', $any)->first();
 		$status = [
 			'statusCode'		=>	200,
 			'httpStatus'		=>	"HTTP_OK",
